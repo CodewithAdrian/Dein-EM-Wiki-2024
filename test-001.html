@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dein EM 2024 Wiki</title>
+  <link rel="stylesheet" href="EM-2024.css">
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <div class="navbar-title">Dein EM 2024 Wiki ⚽</div>
+      <button class="nav-toggle" aria-label="Open navigation menu">
+        <span class="hamburger"></span>
+      </button>
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="Em-2024-Mannschaft.html">Unsere Mannschaft</a></li>
+          <li><a href="#">Spiele</a></li>
+          <li><a href="#">Quiz</a></li>
+          <li><a href="#">Gruppe A</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <h1>EM 2024 Quiz</h1>
+    <div id="quiz"></div>
+    <button onclick="nextQuestion()">Nächste Frage</button>
+    <div id="result"></div>
+
+    <div id="overflow-hidden">
+        <div id="Mannschaften">
+            <div class="text-mobile">
+                <div id="welcome-writing-headingfont" style="text-align: center; padding-top: 5%; font-size: 3.7em;">
+                    Diese Mannschaften nehmen an der EM 2024 teil:
+                </div>
+                <div class="marquee">
+                    <span>Deutschland</span> <span>Schottland</span> <span>Ungarn</span> <span>Schweiz</span>
+                    <span>Spanien</span> <span>Kroatien</span> <span>Italien</span> <span>Albanien</span>
+                    <span>Slowenien</span> <span>Dänemark</span> <span>Serbien</span> <span>England</span>
+                    <span>Polen</span> <span>Niederlande</span> <span>Österreich</span> <span>Frankreich</span>
+                    <span>Belgien</span> <span>Slowakei</span> <span>Rumänien</span> <span>Ukraine</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="countdown">
+        <img src="./bilder/hnitergrund-countdown.png" alt="Hintergrund" style="width:100%;">
+        <div class="centered">Es dauert noch <p id="countdown1"></p> bis zum Beginn der EM 2024</div>
+    </div>
+
+    <script src="EM-2024.js"></script>
+  </main>
+  <footer>
+    <div id="background" style="padding-bottom: 5%;">
+        <div class="text-mobile">
+            <div id="footer-container">
+                <div id="mehrspaltig">
+                    <div id="welcome-writing-headingfont" style="overflow: hidden; font-size: 2em;">
+                        Infos
+                    </div>
+                    <div id="text-text" style="padding-top: 7%; width: 10%; line-height: 190%;">
+                        <a href="EM-2024-Impressum.html" style="color: white;">Impressum</a>
+                        <a href="EM-2024.html" style="color: white;">Home</a>
+                        <a href="EM-2024-Spiele.html" style="color: white;">Spiele</a>
+                        <a href="EM-2024-Quiz.html" style="color: white;">Quiz</a>
+                    </div>
+                </div>
+                <div id="mehrspaltig">
+                    <h4>Folgen Sie uns:</h4>
+                    <div class="social-icons" >
+                        <a href="#"><img src="bilder/facebook-icon.png" style="width: 10%; padding-right: 1%; list-style-type: none;"></a>
+                        <a href="#"><img src="bilder/twitter-icon.png" style="width: 10%; padding-right: 1%;"></a>
+                        <a href="#"><img src="bilder/instagram-icon.png" style="width: 10%; padding-right: 1%;"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </footer>
+</body>
+</html>
+

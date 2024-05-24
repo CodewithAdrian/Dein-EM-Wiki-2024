@@ -1,0 +1,409 @@
+/* Besondere Schriftarten */
+@font-face {
+    font-family: myFont;
+    src: url(schriftarten/funky.ttf);
+  }
+  
+  @font-face {
+    font-family: myFont2;
+    src: url(schriftarten/flowers.ttf);
+  }
+  
+  @font-face {
+    font-family: myFont3;
+    src: url(schriftarten/Retosta.otf);
+  }
+  
+  @font-face {
+    font-family: myFont4;
+    src: url(schriftarten/BADA.TTF);
+  }
+  
+  /* Handy-Design */
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; /* Added fallback font family */
+    
+  }
+ /*Handyoptische Änderungen */
+  .text-mobile {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  /*Navigations-Menü*/
+  ul li a {
+    list-style-type: none;
+  }
+  
+  .navbar {
+    background-color: #122E2B;
+    font-family: myFont3;
+    font-size: 2em;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px; /* Simplified padding declaration */
+  }
+  
+  .navbar-title {
+    flex-grow: 1;
+    text-align: center;
+    font-family: myFont4; /* Moved font family declaration here */
+  }
+  
+  .nav-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-right: 20px;
+  }
+  
+  .hamburger {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    position: relative;
+    right: 10px;
+  }
+  
+  .hamburger:before,
+  .hamburger:after {
+    content: '';
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    position: absolute;
+    left: 0;
+  }
+  
+  .hamburger:before {
+    top: -8px;
+  }
+  
+  .hamburger:after {
+    bottom: -8px;
+  }
+  
+  .nav-menu {
+    display: none;
+    list-style: none;
+    top: 100%;
+    background-color: #122E2B;
+    display: grid;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  
+  .nav-menu.open {
+    display: inline;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  
+  .nav-menu li {
+    margin-bottom: 10px;
+  }
+  
+  .nav-menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 1em;
+    list-style: none;
+  }
+  
+  .nav-menu a:hover {
+    color: #000;
+  }
+
+  img {
+    width: 100%; 
+  }
+
+  /* Willkommen Page */
+  #welcome-writing-headingfont {
+    font-size: 4em;
+    font-family: myFont3;
+  }
+  
+  .countdown {
+    position: relative;
+    text-align: center;
+    color: #122E2B;
+    font-family: myFont3;
+    background-color: #122E2B;
+  }
+  
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 180%;
+  }
+  /* Unsere Mannschaft - Deutschland */
+.Spieler {
+  display: grid;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.box-spieler{
+  margin: 1%;
+  padding: 1%;
+  border: 2px solid rgb(61, 61, 61);
+  text-align: center;
+  background-color: white;
+  color: #122E2B;
+}
+
+
+#text-text {
+  font-family: Arial, Helvetica, sans-serif; 
+  font-size: 1.5em; 
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+#overflow-hidden {
+  overflow: hidden;
+  overflow-x: hidden;
+}
+
+.card p {
+  display: none;
+}
+
+  /*größere Bildschirme */
+  @media screen and (min-width: 600px) {
+   .nav-menu {
+      display: flex; 
+      flex-direction: row; /* Changed flex direction to row */
+      position: static;
+      width: auto;
+      background-color: transparent;
+    }
+  
+   .nav-menu li {
+      margin-bottom: 0;
+      margin-left: 20px;
+
+      font-size: 180%;
+    }
+  
+    .mehrspaltig {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+      
+    .mehrspaltig img {
+        width: 45%; 
+        height: auto;
+        margin: 10px;
+    }
+      
+    .mehrspaltig #welcome-writing {
+      width: 50%; /* Set the width of the text to 50% */
+      padding: 20px;
+      margin: 10px;
+    }
+
+    #footer-container {
+      display: flex; 
+      justify-content: space-between;
+      text-align: left;
+    }
+
+    @media screen and (max-width: 600px) {
+      
+    
+    .card p {
+      display: none;
+    }
+  }
+
+  
+    
+    .card .image-box {
+      width: 100%;
+      height: 100%;
+      border-radius: inherit;
+    }
+
+    .card .image-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 50% 90%;
+      border-radius: inherit;
+      transition: 0.5 ease-in-out;
+    }
+
+    .card:hover img {
+      filter: grayscale(1) brightness(0.4);
+    }
+    
+    .card:hover::after {
+      opacity: 1;
+      inset: 20px;
+    }
+    
+    .card {
+      width: 400px;
+      aspect-ratio: 1 / 0.7;
+      border-radius: 8px;
+      position: relative;
+      cursor: pointer;
+    }
+    
+
+    @media screen and (min-width: 1200px) {
+      .card {
+        width: 400px;
+        aspect-ratio: 1 / 0.7;
+        border-radius: 8px;
+        position: relative;
+        cursor: pointer;
+      }
+      
+      .card .image-box {
+        width: 100%;
+        height: 100%;
+        border-radius: inherit;
+      }
+      
+      .card .image-box img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 50% 90%;
+        border-radius: inherit;
+        transition: 0.5 ease-in-out;
+      }
+      
+      .card::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border: 2px solid white;
+        border-radius: inherit;
+        opacity: 0;
+        transition: 0.4s ease-in-out;
+      }
+      
+      .card:hover img {
+        filter: grayscale(1) brightness(0.4);
+      }
+      
+      .card:hover::after {
+        opacity: 1;
+        inset: 20px;
+      }
+      
+      .content {
+        width: 80%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+    }
+
+    /* Zusatz funktionen */
+  }
+
+  
+#background {
+    background-color: #122E2B;
+    color: white;
+  }
+
+  #footer-container {
+    text-align: center;
+  }
+
+  a:link, a:visited {
+    text-decoration: none;
+  }
+
+  /* extra Funktionen */
+  .marquee {
+    width: 350%;
+    height: 50px;
+    overflow: hidden;
+    background-color: #ffffff;
+    color: black;
+    font-size: 2em;
+    font-family: myFont3;
+    line-height: 50px;
+    animation: scroll 30s linear infinite;
+    text-align: right;
+    letter-spacing: 2px;
+    word-spacing: 2em;
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+
+  .question {
+    margin-bottom: 1em; 
+  }
+  .options { margin-bottom: 2em; text-align: center;}
+  .options button {
+    margin-right: 2em; 
+    margin-bottom: 1.2em;
+    background-color:#2596be;
+    color: white;
+    font-size: 1.1em;
+  }
+
+  #button-design {
+    text-align: center;
+  }
+
+
+
+.button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgb(20, 20, 20);
+  border: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 0px 4px rgba(180, 160, 255, 0.253);
+  cursor: pointer;
+  transition-duration: 0.3s;
+  overflow: hidden;
+  position: relative;
+}
+
+.svgIcon {
+  width: 12px;
+  transition-duration: 0.3s;
+}
+
+.svgIcon path {
+  fill: white;
+}
+
